@@ -1,16 +1,22 @@
 # Задание 3
 
-def format_record(rec):
+def format_record(rec: tuple[str, str, float]) -> str:
     """
     Форматирует запись студента.
     Выбрасывает TypeError, если типы элементов неверны.
-    Выбрасывает ValueError, если ФИО/группа пусты или GPA вне диапазона [0.0; 5.0].
+    Выбрасывает ValueError, если в кортеже не 3 элемента, ФИО/группа пусты или GPA вне диапазона [0.0; 5.0].
     """
+
+    if len(rec) != 3:
+        raise ValueError('Введите ФИО, группу и GPA')
     full_name = str(rec[0]).split()
     group = str(rec[1]).strip()
     grade = rec[2]
-    if (type(rec[0]) is not str) or (type(rec[1]) is not str) or (type(rec[2]) not in (float, int)):
-        raise TypeError('Данные указаны не в том формате')
+ 
+    if (type(rec[0]) is not str) or (type(rec[1]) is not str):
+        raise TypeError('ФИО должны быть строкой/Группа должна быть строкой')
+    if (type(rec[2]) not in (float, int)):
+        raise TypeError('GPA должен быть числом')
     if len(full_name) < 2:
         raise ValueError('ФИО должно содержать минимум Фамилию и Имя')
     if not group:
