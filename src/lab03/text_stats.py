@@ -1,6 +1,6 @@
 import sys
 
-from labs.lib.text import normalize, tokenize, count_freq, top_n
+from src.lib.text import normalize, tokenize, count_freq, top_n
 
 def main():
     raw_text = sys.stdin.readline()

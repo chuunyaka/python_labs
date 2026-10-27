@@ -3,11 +3,11 @@ import argparse
 from pathlib import Path
 
 try:
-    from labs.lab04.io_txt_csv import read_text, write_csv
+    from src.lab04.io_txt_csv import read_text, write_csv
 except ImportError:
     from io_txt_csv import read_text, write_csv
 
-from labs.lib.text import normalize, tokenize, count_freq, top_n
+from src.lib.text import normalize, tokenize, count_freq, top_n
 
 
 def print_pretty_table(title: str, headers: list[str], rows: list) -> None:
