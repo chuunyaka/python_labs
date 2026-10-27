@@ -1,0 +1,5 @@
+[
+  {"item": "Laptop", "price": "75000", "brand": "MSI"},
+  {"item": "Smartphone", "price": "45000", "brand": "Honor"},
+  {"item": "Vacuum Cleaner", "price": "30000"}
+]

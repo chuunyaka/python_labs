@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Harry Potter",
+    "author": "J.K. Rowling",
+    "year": "1997"
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "year": "1954"
+  },
+  {
+    "title": "Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "year": "1892"
+  }
+]
