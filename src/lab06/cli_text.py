@@ -17,6 +17,9 @@ def main():
 
     args = parser.parse_args()
 
+    if args.command == "stats" and args.top < 1:
+        parser.error("--top должен быть положительным числом")
+        
     try:
         if args.command == "cat":
             with open(args.input, "r", encoding="utf-8") as f:
